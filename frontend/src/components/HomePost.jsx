@@ -19,6 +19,7 @@ const HomePost = () => {
           <p>16:44</p>
           </div>
         </div>
+        
         <p className="text-sm md:text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took aly </p>
       </div>
     </div>
