@@ -1,30 +1,65 @@
-// import React from 'react';
-import Navbar from "./components/Navbar"
-import Footer from "./components/Footer"
+import React from 'react';
 import Home from "./pages/Home"
-
 import { Route, Routes } from 'react-router-dom';
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-// import { UserContextProvider } from './context/UserContext'
+import PostDetails from './pages/PostDetails'
+import CreatePost from './pages/CreatePost'
+import { UserContextProvider } from './context/UserContext'
 
 
 const App = () => {
   return (
     <div>
-      <Navbar />
-      {/* <UserContextProvider> */}
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/login" element={<Login />} />
-        <Route exact path="/register" element={<Register />} />
-      </Routes>
-      {/* </UserContextProvider> */}
-
-
-      <Footer />
+      <UserContextProvider>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/register" element={<Register />} />
+          <Route exact path="/posts/post/:id" element={<PostDetails />} />
+          <Route exact path="/write" element={<CreatePost />} />
+        </Routes>
+      </UserContextProvider>
     </div>
-  );
+  )
 }
 
 export default App;
+
+
+// import { Route, Routes } from 'react-router-dom'
+// import Home from "./pages/Home"
+// import Login from "./pages/Login"
+// import Register from "./pages/Register"
+// // 
+// // import CreatePost from './pages/CreatePost'
+// // import EditPost from './pages/EditPost'
+// // import Profile from './pages/Profile'
+// import { UserContextProvider } from './context/UserContext'
+// // import MyBlogs from './pages/MyBlogs'
+
+
+
+// const App = () => {
+
+
+
+//   return (
+
+//     <UserContextProvider>
+//       <Routes>
+//         <Route exact path="/" element={<Home />} />
+//         <Route exact path="/login" element={<Login />} />
+//         <Route exact path="/register" element={<Register />} />
+//         {/* 
+//       
+//       <Route exact path="/edit/:id" element={<EditPost/>}/>
+//       <Route exact path="/myblogs/:id" element={<MyBlogs/>}/>
+//       <Route exact path="/profile/:id" element={<Profile/>}/> */}
+//       </Routes>
+
+//     </UserContextProvider>
+//   )
+// }
+
+// export default App
