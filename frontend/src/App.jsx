@@ -6,6 +6,7 @@ import Register from "./pages/Register";
 import PostDetails from './pages/PostDetails'
 import CreatePost from './pages/CreatePost'
 import { UserContextProvider } from './context/UserContext'
+import EditPost from './pages/EditPost';
 
 
 const App = () => {
@@ -16,8 +17,11 @@ const App = () => {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/register" element={<Register />} />
-          <Route exact path="/posts/post/:id" element={<PostDetails />} />
           <Route exact path="/write" element={<CreatePost />} />
+          <Route exact path="/posts/post/:id" element={<PostDetails />} />
+          <Route exact path="/edit/:id" element={<EditPost />} />
+          <Route exact path="/profile/:id" element={<Profile />} />
+          <Route exact path="/profile/:id" element={<Profile />} />
         </Routes>
       </UserContextProvider>
     </div>

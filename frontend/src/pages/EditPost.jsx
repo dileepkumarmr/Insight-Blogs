@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState }  from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { ImCross } from "react-icons/im";
 
-const CreatePost = () => {
+const EditPost = () => {
 
     const [cat, setCat] = useState("")
     const [cats, setCats] = useState([])
@@ -21,17 +21,15 @@ const CreatePost = () => {
         setCats(updatedCats)
     }
 
-
     const handleCreate = () => {
         
-     }
-
+    }
 
     return (
         <div>
             <Navbar />
             <div className='px-6 md:px-[150px] mt-8'>
-                <h1 className='font-bold md:text-2xl text-xl'>Create a post</h1>
+                <h1 className='font-bold md:text-2xl text-xl'>Update post</h1>
                 <form className='w-full flex flex-col space-y-4 md:space-y-8 mt-4' action="">
 
                     <input type="file" className='px-4' name="" id="" />
@@ -64,7 +62,8 @@ const CreatePost = () => {
 
                     </div>
                     <textarea onChange={(e) => setDesc(e.target.value)} rows={15} cols={30} className='px-4 py-2 outline-none' placeholder='Enter post description' />
-                    <button onClick={handleCreate} className='bg-black w-full md:w-[20%] mx-auto text-white font-semibold px-4 py-2 md:text-xl text-lg'>Create</button>
+                    <button onClick={handleCreate} className='bg-black w-full md:w-[20%] mx-auto text-white font-semibold px-4 py-2 md:text-xl text-lg'>Update</button>
+
                 </form>
             </div>
             <Footer />
@@ -72,4 +71,4 @@ const CreatePost = () => {
     )
 }
 
-export default CreatePost
+export default EditPost
